@@ -21,8 +21,7 @@ div {display =inline-flex;
 	href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 <!-- Bootstrap CDN -->
 </head>
-<body background="1.jpg">
-<div style="background-size:cover"></div>
+<body background="3.jpg">
 	<h1 align=center>メニュー画面</h1>
 	<form action="/Housing/Menu" method=post>
 		<div>
@@ -41,10 +40,9 @@ div {display =inline-flex;
 				<button type="submit" class="btn btn-warning active" name="newhome" value=3>新築一戸建て</button>
 				<button type="submit" class="btn btn-warning active" name="oldhome" value=4>中古一戸建て</button>
 
-
 				<!-- Bootstrap CDN -->
 				<script
-					src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+					src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"> </script>
 				<!-- Bootstrap CDN -->
 		</div>
 	</form>

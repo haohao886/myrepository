@@ -24,7 +24,7 @@ div {display =inline-flex;
 
 </style>
 </head>
-	<body background="1.jpg">
+	<body background="3.jpg">
 		<h1 align=center>絞り込み条件①</h1>
 		<form action="/Housing/Condition" method=post>
 			<input type="hidden" name="condition"

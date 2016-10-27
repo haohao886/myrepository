@@ -14,7 +14,7 @@ div	{
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>絞り込み条件③</title>
 </head>
-<body background="2.jpg">
+<body background="3.jpg">
 <h1 align=center>絞り込み条件③</h1>
 <form action ="/Housing/Research" method=post>
 <input type="hidden" name="condition" value=<%= request.getAttribute("condition") %>>
