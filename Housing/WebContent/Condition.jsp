@@ -17,14 +17,14 @@ body {
 div {display =inline-flex;
 
 }
+</style>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>絞り込み条件①</title>
-
-</style>
+<link rel="stylesheet" type="text/css" href="style_bg.css">
 </head>
-	<body background="3.jpg">
+	<body>
 		<h1 align=center>絞り込み条件①</h1>
 		<form action="/Housing/Condition" method=post>
 			<input type="hidden" name="condition"

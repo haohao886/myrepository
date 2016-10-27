@@ -16,7 +16,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>物件検索結果</title>
 </head>
-<body background="3.jpg">
+<link rel="stylesheet" type="text/css" href="style_bg.css">
+<body>
 <h1 align=center>物件検索結果</h1>
 <table border=1 align=center>
 <tr><th></th><th align=center>物件番号</th><th align=center>タイプ</th>
