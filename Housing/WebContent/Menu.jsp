@@ -14,12 +14,14 @@ div {display =inline-flex;
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>不動産メニュー</title>
+
 <!-- Bootstrap CDN -->
 <link rel="stylesheet"
 	href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet"
 	href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 <!-- Bootstrap CDN -->
+
 </head>
 <link rel="stylesheet" type="text/css" href="style_bg.css">
 <body>
@@ -27,24 +29,34 @@ div {display =inline-flex;
 	<form action="/Housing/Menu" method=post>
 		<div>
 			<p>
-				<h2 align=center>買う</h2>
-				<button type="submit" class="btn btn-info active" name="newmansion" value=1>新築マンション</button>
-				<button type="submit" class="btn btn-info active" name="oldmansion" value=2>中古マンション</button>
-				<button type="submit" class="btn btn-info active" name="newhome" value=3>新築一戸建て</button>
-				<button type="submit" class="btn btn-info active" name="oldhome" value=4>中古一戸建て</button>
+			<h2 align=center>買う</h2>
+			<button type="submit" class="btn btn-info active" name="newmansion"
+				value=1>新築マンション</button>
+			<button type="submit" class="btn btn-info active" name="oldmansion"
+				value=2>中古マンション</button>
+			<button type="submit" class="btn btn-info active" name="newhome"
+				value=3>新築一戸建て</button>
+			<button type="submit" class="btn btn-info active" name="oldhome"
+				value=4>中古一戸建て</button>
 		</div>
 		<div>
 			<p>
-				<h2 align=center>借りる</h2>
-				<button type="submit" class="btn btn-warning active" name="newmansion" value=1>新築マンション</button>
-				<button type="submit" class="btn btn-warning active" name="oldmansion" value=2>中古マンション</button>
-				<button type="submit" class="btn btn-warning active" name="newhome" value=3>新築一戸建て</button>
-				<button type="submit" class="btn btn-warning active" name="oldhome" value=4>中古一戸建て</button>
+			<h2 align=center>借りる</h2>
+			<button type="submit" class="btn btn-warning active"
+				name="newmansion" value=1>新築マンション</button>
+			<button type="submit" class="btn btn-warning active"
+				name="oldmansion" value=2>中古マンション</button>
+			<button type="submit" class="btn btn-warning active" name="newhome"
+				value=3>新築一戸建て</button>
+			<button type="submit" class="btn btn-warning active" name="oldhome"
+				value=4>中古一戸建て</button>
 
-				<!-- Bootstrap CDN -->
-				<script
-					src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"> </script>
-				<!-- Bootstrap CDN -->
+			<!-- Bootstrap CDN -->
+			<script
+				src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js">
+
+			</script>
+			<!-- Bootstrap CDN -->
 		</div>
 	</form>
 </body>

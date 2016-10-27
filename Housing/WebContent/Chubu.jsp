@@ -1,0 +1,51 @@
+<%@ page language="java" contentType="text/html; UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<style type=text/css>
+body{
+	text-align: center;
+	}
+div	{
+	display=inline-flex;
+	}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>絞り込み条件②</title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="style_bg.css">
+<!-- Bootstrap CDN -->
+<link rel="stylesheet"
+	href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<!-- Bootstrap CDN -->
+
+<body>
+<h1 align=center>絞り込み条件②</h1>
+<form action ="/Housing/Area" method=post>
+<input type="hidden" name="condition" value=<%= request.getAttribute("condition") %>>
+<p>中部
+<div>
+<button type="submit" class="btn btn-info active"
+				style="WIDTH: 80px; HEIGHT: 40px" name="aomori" value="愛知">愛知</button>
+<button type="submit" class="btn btn-info active"
+				style="WIDTH: 80px; HEIGHT: 40px" name="miyagi" value="静岡">静岡</button>
+</div>
+<br>
+<div>
+<button type="submit" class="btn btn-info active"
+				style="WIDTH: 80px; HEIGHT: 40px" name="iwate" value="岐阜">岐阜</button>
+<button type="submit" class="btn btn-info active"
+				style="WIDTH: 80px; HEIGHT: 40px" name="akita" value="三重">三重</button>
+</div>
+</form>
+	<!-- Bootstrap CDN -->
+	<script
+		src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js">
+	</script>
+	<!-- Bootstrap CDN -->
+</body>
+</html>

@@ -14,21 +14,42 @@ div	{
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>絞り込み条件②</title>
 </head>
+
+<link rel="stylesheet" type="text/css" href="style_bg.css">
+<!-- Bootstrap CDN -->
+<link rel="stylesheet"
+	href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<!-- Bootstrap CDN -->
+
 <body>
 <h1 align=center>絞り込み条件②</h1>
 <form action ="/Housing/Area" method=post>
 <input type="hidden" name="condition" value=<%= request.getAttribute("condition") %>>
 <p>東北
 <div>
-<button type="submit" name="aomori" value="青森">青森</button>
-<button type="submit" name="miyagi" value="宮城">宮城</button>
-<button type="submit" name="iwate" value="岩手">岩手</button>
+<button type="submit" class="btn btn-info active"
+				style="WIDTH: 80px; HEIGHT: 40px" name="aomori" value="青森">青森</button>
+<button type="submit" class="btn btn-info active"
+				style="WIDTH: 80px; HEIGHT: 40px" name="miyagi" value="宮城">宮城</button>
+<button type="submit" class="btn btn-info active"
+				style="WIDTH: 80px; HEIGHT: 40px" name="iwate" value="岩手">岩手</button>
 </div>
+<br>
 <div>
-<button type="submit" name="akita" value="秋田">秋田</button>
-<button type="submit" name="fukushima" value="福島">福島</button>
-<button type="submit" name="yamagata" value="山形">山形</button>
+<button type="submit" class="btn btn-info active"
+				style="WIDTH: 80px; HEIGHT: 40px" name="akita" value="秋田">秋田</button>
+<button type="submit" class="btn btn-info active"
+				style="WIDTH: 80px; HEIGHT: 40px" name="fukushima" value="福島">福島</button>
+<button type="submit" class="btn btn-info active"
+				style="WIDTH: 80px; HEIGHT: 40px" name="yamagata" value="山形">山形</button>
 </div>
 </form>
+	<!-- Bootstrap CDN -->
+	<script
+		src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js">
+	</script>
+	<!-- Bootstrap CDN -->
 </body>
 </html>
