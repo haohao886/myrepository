@@ -49,4 +49,14 @@
     <servlet-name>Research</servlet-name>
     <url-pattern>/Research</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Option</display-name>
+    <servlet-name>Option</servlet-name>
+    <servlet-class>Housing.Option</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Option</servlet-name>
+    <url-pattern>/Option</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -22,7 +22,7 @@ div {display =inline-flex;
 <!-- Bootstrap CDN -->
 </head>
 <link rel="stylesheet" type="text/css" href="style_bg.css">
-<body>
+<body background="3.jpg">
 	<h1 align=center>メニュー画面</h1>
 	<form action="/Housing/Menu" method=post>
 		<div>
@@ -36,10 +36,10 @@ div {display =inline-flex;
 		<div>
 			<p>
 				<h2 align=center>借りる</h2>
-				<button type="submit" class="btn btn-warning active" name="newmansion" value=1>新築マンション</button>
-				<button type="submit" class="btn btn-warning active" name="oldmansion" value=2>中古マンション</button>
-				<button type="submit" class="btn btn-warning active" name="newhome" value=3>新築一戸建て</button>
-				<button type="submit" class="btn btn-warning active" name="oldhome" value=4>中古一戸建て</button>
+				<button type="submit" class="btn btn-warning active" name="newmansion" value=5>新築マンション</button>
+				<button type="submit" class="btn btn-warning active" name="oldmansion" value=6>中古マンション</button>
+				<button type="submit" class="btn btn-warning active" name="newhome" value=7>新築一戸建て</button>
+				<button type="submit" class="btn btn-warning active" name="oldhome" value=8>中古一戸建て</button>
 
 				<!-- Bootstrap CDN -->
 				<script

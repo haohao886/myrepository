@@ -15,7 +15,7 @@ div	{
 <title>絞り込み条件③</title>
 </head>
 <link rel="stylesheet" type="text/css" href="style_bg.css">
-<body>
+<body background="3.jpg">
 <h1 align=center>絞り込み条件③</h1>
 <form action ="/Housing/Research" method=post>
 <input type="hidden" name="condition" value=<%= request.getAttribute("condition") %>>
@@ -72,13 +72,13 @@ div	{
 <div>
 <p>面積
 <select name="menseki1">
-<option value=50>50m2</option>
+<option value=10>10m2</option>
 <option value=100>100m2</option>
 <option value=150>150m2</option>
 </select>
 以上
 <select name="menseki2">
-<option value=50>50m2</option>
+<option value=10>10m2</option>
 <option value=100>100m2</option>
 <option value=150>150m2</option>
 </select>
@@ -86,10 +86,10 @@ div	{
 </div>
 <div>
 <p>間取り
-<input type="checkbox" name="madori" value="1" />1K/1DK/1LDK
-<input type="checkbox" name="madori" value="2" />2K/2DK2/LDK
-<input type="checkbox" name="madori" value="3" />3K/2DK/2LDK
-<input type="checkbox" name="madori" value="4" />4K以上
+<input type="checkbox" name="madori" value="1%" />1K/1DK/1LDK
+<input type="checkbox" name="madori" value="2%" />2K/2DK/2LDK
+<input type="checkbox" name="madori" value="3%" />3K/3DK/3LDK
+<input type="checkbox" name="madori" value="4%" />4K以上
 </div>
 <button class="btn btn-large btn-primary"
 				style="WIDTH: 80px; HEIGHT: 40px" type="submit" name="research" value="検索">検索</button>

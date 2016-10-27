@@ -17,7 +17,7 @@
 <title>物件検索結果</title>
 </head>
 <link rel="stylesheet" type="text/css" href="style_bg.css">
-<body>
+<body background="3.jpg">
 <h1 align=center>物件検索結果</h1>
 <table border=1 align=center>
 <tr><th></th><th align=center>物件番号</th><th align=center>タイプ</th>
@@ -204,7 +204,7 @@ m2
 	}
 %>
 </table>
-<form action ="/Housing" method=post>
+<form action ="/Housing/Option" method=post>
 <div>
 <input type="submit" name="reset" value="メニューへ">
 </div>
