@@ -21,7 +21,8 @@ div {display =inline-flex;
 	href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 <!-- Bootstrap CDN -->
 </head>
-<body background="3.jpg">
+<link rel="stylesheet" type="text/css" href="style_bg.css">
+<body>
 	<h1 align=center>メニュー画面</h1>
 	<form action="/Housing/Menu" method=post>
 		<div>
