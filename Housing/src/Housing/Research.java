@@ -45,44 +45,100 @@ public class Research extends HttpServlet {
 //			madorimap.put("madori",madori[i]);
 //			madorilist.add(madorimap);
 //		}
-		Connection conn;
-		PreparedStatement ps;
+		Connection conn = null;
+		PreparedStatement ps = null;
 		try{
 			 Class.forName("oracle.jdbc.driver.OracleDriver");
 			 conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","DEV","oracle");
 			 conn.setAutoCommit(false);
-			 String sql="select * from  where  =?,";
+			 String sql="select dev.TBLDING.bldno , dev.TBLDING.TYPE , dev.TKEN.kenname , dev.TBLDING.address , dev.TBLDING.year , dev.TBLDING.elevator , dev.TBLDING.houses ,"
+					 + "dev.TBLDING.kouzo , dev.TLINE.linename , dev.TSTATION.station , dev.TBLDING.distance1 ,  dev.TROOM.area ,dev.TBLDING.rank , dev.troom.floor,"
+					 + "dev.TROOM.park , dev.TROOM.ldk , dev.TROOM.direction , dev.TROOM.furniture , dev.TROOM.price , dev.TROOM.cost , dev.troom.mcost , dev.TROOM.deposit , dev.TROOM.keymoney,"
+					 + "dev.TROOM.parkcost , dev.TROOM.typeflg , dev.TROOM.expense , dev.TBROKER.brokername , dev.TBROKER.tele , dev.TBROKER.address as address2 , dev.TBROKER.certs , dev.TBROKER.charge "
+					 + "from dev.TBLDING "
+					 + "join dev.TROOM on dev.TBLDING.bldno = dev.TROOM.bldno "
+					 + "join dev.TBROKER on dev.troom.brokerno = dev.TBROKER.brokerno "
+					 + "join dev.TLINE on dev.TBLDING.lineno1 = dev.TLINE.lineno "
+					 + "join dev.TSTATION on dev.TBLDING.stationno1 = dev.TSTATION.stationno and dev.TBLDING.lineno1 = dev.TSTATION.lineno "
+					 + "join dev.TKEN on dev.TBLDING.kenno = dev.TKEN.kenno "
+					 + "where dev.TBLDING.TYPE=? and dev.TKEN.kenname=? and "
+					 + "dev.TROOM.price between ? and ?";
 			 ps=conn.prepareStatement(sql);
 			 ps.setString(1, condition);
 			 ps.setString(2, area);
 			 ps.setString(3, kakaku1);
 			 ps.setString(4, kakaku2);
-			 ps.setString(5, menseki1);
-			 ps.setString(6, menseki2);
+//			 ps.setString(5, menseki1);
+//			 ps.setString(6, menseki2);
 			 ResultSet rs=ps.executeQuery();
-			 while(rs.next()){
-				 String =rs.getString();
-				 String =rs.getString();
-				 Dateb=rs.getDate();
-				 SimpleDateFormat f=new SimpleDateFormat();
-				 String =f.format();
-				 request.setAttribute(,);
-				 request.setAttribute(,);
-				 request.setAttribute(,);
-			 }
 			 @SuppressWarnings("rawtypes")
-				ArrayList<HashMap<String, Comparable>> list = new ArrayList<HashMap<String, Comparable>>();
-				while (rs.next()) {
+			ArrayList<HashMap<String, Comparable>> list = new ArrayList<HashMap<String, Comparable>>();
+			while (rs.next()) {
 				@SuppressWarnings("rawtypes")
 				HashMap<String, Comparable> map = new HashMap<String, Comparable>();
-				map.put("", rs.getString(""));
-				map.put("", rs.getString(""));
-				map.put("", rs.getDate(""));
-				map.put("", rs.getString(""));
-				map.put("", rs.getString(""));
+				 map.put("bldno",rs.getString("bldno"));
+				 int type=rs.getInt("type");
+				 if(type==1){
+					 map.put("type","新築マンション");
+				 }else if(type==2){
+					 map.put("type","中古マンション");
+				 }else if(type==3){
+					 map.put("type","新築一戸建て");
+				 }else if(type==4){
+					 map.put("type","中古一戸建て");
+				 }
+				 map.put("kenname",rs.getString("kenname"));
+				 map.put("address",rs.getString("address"));
+				 map.put("year",rs.getString("year"));
+				 int elevator=rs.getInt("elevator");
+				 if(elevator==0){
+					 map.put("elevator","なし");
+				 }else if(elevator==1){
+					 map.put("elevator","あり");
+				 }
+				 map.put("houses",rs.getString("houses"));
+				 map.put("kouzo",rs.getString("kouzo"));
+				 map.put("linename",rs.getString("linename"));
+				 map.put("station",rs.getString("station"));
+				 map.put("distance1",rs.getString("distance1"));
+				 map.put("menseki",rs.getString("area"));
+				 map.put("rank",rs.getString("rank"));
+				 map.put("floor",rs.getString("floor"));
+				 int park=rs.getInt("park");
+				 if(park==0){
+					 map.put("park","なし");
+				 }else if(park==1){
+					 map.put("park","あり");
+				 }
+				 map.put("ldk",rs.getString("ldk"));
+				 map.put("direction",rs.getString("direction"));
+				 int furniture=rs.getInt("furniture");
+				 if(furniture==0){
+					 map.put("furniture","なし");
+				 }else if(furniture==1){
+					 map.put("furniture","あり");
+				 }
+				 map.put("price",rs.getString("price"));
+				 map.put("cost",rs.getString("cost"));
+				 map.put("mcost",rs.getString("mcost"));
+				 map.put("deposit",rs.getString("deposit"));
+				 map.put("keymoney",rs.getString("keymoney"));
+				 map.put("parkcost",rs.getString("parkcost"));
+				 int typeflg=rs.getInt("typeflg");
+				 if(typeflg==1){
+					 map.put("typeflg","販売");
+				 }else if(typeflg==2){
+					 map.put("typeflg","賃貸");
+				 }
+				 map.put("expense",rs.getString("expense"));
+				 map.put("brokername",rs.getString("brokername"));
+				 map.put("tele",rs.getString("tele"));
+				 map.put("address2",rs.getString("address2"));
+				 map.put("certs",rs.getString("certs"));
+				 map.put("charge",rs.getString("charge"));
 				list.add(map);
-				}
-				request.setAttribute("list",list);
+			}
+			request.setAttribute("list",list);
 		} catch (SQLException e) {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
@@ -90,8 +146,18 @@ public class Research extends HttpServlet {
 			// TODO 自動生成された catch ブロック
 			e.printStackTrace();
 		}finally{
-			ps.close();
-			conn.close();
+			try {
+				ps.close();
+			} catch (SQLException e) {
+				// TODO 自動生成された catch ブロック
+				e.printStackTrace();
+			}
+			try {
+				conn.close();
+			} catch (SQLException e) {
+				// TODO 自動生成された catch ブロック
+				e.printStackTrace();
+			}
 		}
 		RequestDispatcher dispatcher=request.getRequestDispatcher("/ResearchResult.jsp");
 		dispatcher.forward(request, response);

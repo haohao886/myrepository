@@ -28,18 +28,18 @@ div {display =inline-flex;
 		<div class="bg-info" >
 			<p>
 				<h2 align=center>買う</h2>
-				<button type="submit" class="btn btn-info active" name="newmansion" value="新築マンション">新築マンション</button>
-				<button type="submit" class="btn btn-info active" name="oldmansion" value="中古マンション">中古マンション</button>
-				<button type="submit" class="btn btn-info active" name="newhome" value="新築一戸建て">新築一戸建て</button>
-				<button type="submit" class="btn btn-info active" name="oldhome" value="中古一戸建て">中古一戸建て</button>
+				<button type="submit" class="btn btn-info active" name="newmansion" value=1>新築マンション</button>
+				<button type="submit" class="btn btn-info active" name="oldmansion" value=2>中古マンション</button>
+				<button type="submit" class="btn btn-info active" name="newhome" value=3>新築一戸建て</button>
+				<button type="submit" class="btn btn-info active" name="oldhome" value=4>中古一戸建て</button>
 		</div>
 		<div class="bg-warning" >
 			<p>
 				<h2 align=center>借りる</h2>
-				<button type="submit" class="btn btn-warning active" name="newmansion" value="新築マンション">新築マンション</button>
-				<button type="submit" class="btn btn-warning active" name="oldmansion" value="中古マンション">中古マンション</button>
-				<button type="submit" class="btn btn-warning active" name="newhome" value="新築一戸建て">新築一戸建て</button>
-				<button type="submit" class="btn btn-warning active" name="oldhome" value="中古一戸建て">中古一戸建て</button>
+				<button type="submit" class="btn btn-warning active" name="newmansion" value=1>新築マンション</button>
+				<button type="submit" class="btn btn-warning active" name="oldmansion" value=2>中古マンション</button>
+				<button type="submit" class="btn btn-warning active" name="newhome" value=3>新築一戸建て</button>
+				<button type="submit" class="btn btn-warning active" name="oldhome" value=4>中古一戸建て</button>
 
 
 				<!-- Bootstrap CDN -->

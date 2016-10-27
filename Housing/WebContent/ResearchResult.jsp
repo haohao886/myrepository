@@ -23,7 +23,7 @@
 <th align=center>住所</th><th align=center>築年数</th><th align=center>エレベーター</th>
 <th align=center>総戸数</th><th align=center>構造</th><th align=center>交通</th>
 <th align=center>面積</th>
-<th align=center>総階数</th><th align=center>階数</th><th align=center>駐車場</th>
+<th align=center>階数/総階数</th><th align=center>駐車場</th>
 <th align=center>間取り</th><th align=center>向き</th><th align=center>家具付き</th>
 <th align=center>価格</th>
 <th align=center>賃料</th><th align=center>管理費</th><th align=center>敷金</th>
@@ -61,6 +61,7 @@
 <%=
 	map.get("year")
 %>
+年
 </td>
 <td>
 <%=
@@ -71,6 +72,7 @@
 <%=
 	map.get("houses")
 %>
+戸
 </td>
 <td>
 <%=
@@ -92,17 +94,18 @@
 <%=
 	map.get("menseki")
 %>
-</td>
-<td>
-<%=
-	map.get("rank")
-%>
+m2
 </td>
 <td>
 <%=
 	map.get("floor")
 %>
+/
+<%=
+	map.get("rank")
+%>
 </td>
+
 <td>
 <%=
 	map.get("park")
@@ -127,31 +130,37 @@
 <%=
 	map.get("price")
 %>
+円
 </td>
 <td>
 <%=
 	map.get("cost")
 %>
+円
 </td>
 <td>
 <%=
 	map.get("mcost")
 %>
+円
 </td>
 <td>
 <%=
 	map.get("deposit")
 %>
+円
 </td>
 <td>
 <%=
 	map.get("keymoney")
 %>
+円
 </td>
 <td>
 <%=
 	map.get("parkcost")
 %>
+円
 </td>
 <td>
 <%=
@@ -162,6 +171,7 @@
 <%=
 	map.get("expense")
 %>
+円
 </td>
 <td>
 <%=

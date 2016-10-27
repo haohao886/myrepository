@@ -20,15 +20,15 @@ div	{
 <input type="hidden" name="condition" value=<%= request.getAttribute("condition") %>>
 <p>関東
 <div>
-<button type="submit" name="tokyo" value="東京">東京</button>
-<button type="submit" name="chiba" value="千葉">千葉</button>
-<button type="submit" name="saitama" value="埼玉">埼玉</button>
-<button type="submit" name="kanagawa" value="神奈川">神奈川</button>
+<button type="submit" name="tokyo" value="東京都">東京都</button>
+<button type="submit" name="chiba" value="千葉県">千葉</button>
+<button type="submit" name="saitama" value="埼玉県">埼玉</button>
+<button type="submit" name="kanagawa" value="神奈川県">神奈川</button>
 </div>
 <div>
-<button type="submit" name="gunma" value="群馬">群馬</button>
-<button type="submit" name="tochigi" value="栃木">栃木</button>
-<button type="submit" name="ibaraki" value="茨城">茨城</button>
+<button type="submit" name="gunma" value="群馬県">群馬</button>
+<button type="submit" name="tochigi" value="栃木県">栃木</button>
+<button type="submit" name="ibaraki" value="茨城県">茨城</button>
 </div>
 </form>
 </body>
