@@ -19,16 +19,16 @@ div	{
 <form action ="/Housing/Research" method=post>
 <input type="hidden" name="condition" value=<%= request.getAttribute("condition") %>>
 <input type="hidden" name="area" value=<%= request.getAttribute("area") %>>
-<p>東京
-<p>エリア
+<h2 align=center>23区エリア</h2>
 <div>
-<p>23区
 <input type="checkbox" name="area2" value="千代田区" />千代田区
 <input type="checkbox" name="area2" value="中央区" />中央区
 <input type="checkbox" name="area2" value="港区" />港区
 <input type="checkbox" name="area2" value="新宿区" />新宿区
 <input type="checkbox" name="area2" value="文京区" />文京区
 <input type="checkbox" name="area2" value="台東区" />台東区
+</div>
+<div>
 <input type="checkbox" name="area2" value="墨田区" />墨田区
 <input type="checkbox" name="area2" value="江東区" />江東区
 <input type="checkbox" name="area2" value="品川区" />品川区
@@ -42,6 +42,8 @@ div	{
 <input type="checkbox" name="area2" value="杉並区" />杉並区
 <input type="checkbox" name="area2" value="豊島区" />豊島区
 <input type="checkbox" name="area2" value="北区" />北区
+</div>
+<div>
 <input type="checkbox" name="area2" value="荒川区" />荒川区
 <input type="checkbox" name="area2" value="板橋区" />板橋区
 <input type="checkbox" name="area2" value="練馬区" />練馬区
@@ -49,7 +51,8 @@ div	{
 <input type="checkbox" name="area2" value="葛飾区" />葛飾区
 <input type="checkbox" name="area2" value="江戸川区" />江戸川区
 </div>
-<p>物件条件<p>
+<h2 align=center>物件条件</h2>
+
 <div>
 <p>価格
 <select name="kakaku1">
@@ -82,13 +85,13 @@ div	{
 </div>
 <div>
 <p>間取り
-<input type="checkbox" name="madori" value="1" />1K/DK/LDK
-<input type="checkbox" name="madori" value="2" />2K/DK/LDK
-<input type="checkbox" name="madori" value="3" />3K/DK/LDK
-<input type="checkbox" name="madori" value="4" />4K/DK/LDK
-<input type="checkbox" name="madori" value="5" />5K/DK/LDK
+<input type="checkbox" name="madori" value="1" />1K/1DK/1LDK
+<input type="checkbox" name="madori" value="2" />2K/2DK2/LDK
+<input type="checkbox" name="madori" value="3" />3K/2DK/2LDK
+<input type="checkbox" name="madori" value="4" />4K以上
 </div>
-<button type="submit" name="research" value="検索">検索</button>
+<button class="btn btn-large btn-primary"
+				style="WIDTH: 80px; HEIGHT: 40px" type="submit" name="research" value="検索">検索</button>
 </form>
 </body>
 </html>
